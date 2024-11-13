@@ -40,3 +40,53 @@
 .read-the-docs {
   color: #888;
 }
+
+.promoRow{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  background-color: #f3655279;
+  padding: 50px;
+  margin: 30px -2rem;
+}
+
+.promoText{
+  color:#ffffff;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.myButton{
+  background-color: #A5631C;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border:0px;
+  color:#ffffff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding : 8px;
+}
+
+.promoImg{
+  max-height: 200px;
+}
+
+.descriptionText{
+  padding-top: 50px;
+  align-items: center;
+  text-align: center;
+}
+
+.searchBar{
+  border-radius: 20px;
+  background-color: #a5631c63;
+  padding: 10px;
+  font-style: italic;
+  color:#ffffff
+}
+
+.menuIcon{
+  
+}
+
+.menuDiv{
+  display: flex;
+  justify-content: space-between;
+}

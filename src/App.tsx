@@ -2,11 +2,13 @@ import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import { useState } from "react";
+import "./App.css";
+import myImage from "./resources/bookcover.jpeg";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
 
-  let items = [
+  let books = [
     "Harry Potter",
     "Shadow and Bone",
     "Crime and Punishment",
@@ -14,9 +16,10 @@ function App() {
     "Pride and Prejudice",
   ];
 
-  let movies = ["Crime and Punishment", "Harry Potter"];
-
-  let series = ["Normal People", "Shadow and Bone"];
+  //The promotion book is selected randomly from all the books
+  //to be displayed on the Promotion Area of the page.
+  let i = Math.floor(Math.random() * books.length);
+  let promoBook = books[i];
 
   const handleSelectedItem = (item: string) => {
     console.log(item);
@@ -28,30 +31,33 @@ function App() {
 
   return (
     <>
-      <Button onClick={handleSearchClick}>Search</Button>
+      <div className="menuDiv">
+        <span className="menuIcon">Menu</span>
+        <span className="searchBar">
+          <text>Search book or author name...</text>
+          <button onClick={handleSearchClick}>Search</button>
+        </span>
+      </div>
       <div>
         {alertVisible && (
-          <Alert onClose={() => setAlertVisibility(false)}>Hello World</Alert>
+          <Alert onClose={() => setAlertVisibility(false)}>
+            No matching items.
+          </Alert>
         )}
       </div>
+      <div className={"promoRow"}>
+        <div>
+          <img className="promoImg" src={myImage}></img>
+        </div>
+        <div className="descriptionText">
+          <p className="promoText">{promoBook}</p>
+          <Button onClick={() => console.log("")}>Add To Wishlist</Button>
+        </div>
+      </div>
       <div>
         <ListGroup
-          items={items}
+          items={books}
           heading="Books"
-          onSelectItem={handleSelectedItem}
-        />
-      </div>
-      <div>
-        <ListGroup
-          items={movies}
-          heading="Movie Adaptations"
-          onSelectItem={handleSelectedItem}
-        />
-      </div>
-      <div>
-        <ListGroup
-          items={series}
-          heading="TV Show Adaptations"
           onSelectItem={handleSelectedItem}
         />
       </div>
