@@ -4,6 +4,7 @@ import Button from "./components/Button";
 import { useState } from "react";
 import "./App.css";
 import myImage from "./resources/bookcover.jpeg";
+import * as MaterialDesign from "react-icons/md";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -32,10 +33,14 @@ function App() {
   return (
     <>
       <div className="menuDiv">
-        <span className="menuIcon">Menu</span>
+        <button className="icon">
+          <MaterialDesign.MdMenu size={40} />
+        </button>
         <span className="searchBar">
-          <text>Search book or author name...</text>
-          <button onClick={handleSearchClick}>Search</button>
+          <input type="text" className="text" placeholder="Search..."></input>
+          <button className="icon" onClick={handleSearchClick}>
+            <MaterialDesign.MdSearch size={30} />
+          </button>
         </span>
       </div>
       <div>

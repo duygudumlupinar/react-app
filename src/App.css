@@ -75,18 +75,38 @@
 }
 
 .searchBar{
-  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
   background-color: #a5631c63;
-  padding: 10px;
+  padding: 4px 15px;
   font-style: italic;
-  color:#ffffff
+  color:#ffffff;
 }
 
-.menuIcon{
-  
+.icon{
+  background-color: transparent;
+  color:#A5631C;
+  padding : 1px;
+  margin-left: 10px;
+  border: 0px;
 }
 
 .menuDiv{
   display: flex;
   justify-content: space-between;
+}
+
+.text{
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color:#ffffff;
+  font-style: italic;
+  font-size: small;
+}
+
+::placeholder {
+  color: #ffffff;
+  opacity: 1;
 }
