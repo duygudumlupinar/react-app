@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #60211A;
 }
 
 .logo {
@@ -42,16 +43,27 @@
 }
 
 .promoRow{
+  background-color: #CF966F;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 10px;
+  width: 100vw;
+  padding:40px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  background-color: #f3655279;
-  padding: 50px;
-  margin: 30px -2rem;
 }
 
 .promoText{
+  text-align: left;
   color:#ffffff;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.promoImg{
+  max-height: 250px;
 }
 
 .myButton{
@@ -62,10 +74,6 @@
   color:#ffffff;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   padding : 8px;
-}
-
-.promoImg{
-  max-height: 200px;
 }
 
 .descriptionText{
@@ -109,4 +117,25 @@
 ::placeholder {
   color: #ffffff;
   opacity: 1;
+}
+
+.categoryRow{
+  background-color: #D9D9D9;
+}
+
+.categoryButton{
+  height:150px;
+  width: 25vmin;
+  border:none;
+  border-radius: 5px;
+  background-color: #A5631C;
+  color:#ffffff;
+  text-transform: uppercase;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.categoryButton:hover{
+  transform: scale(1.1);
 }

@@ -55,17 +55,27 @@ function App() {
           <img className="promoImg" src={myImage}></img>
         </div>
         <div className="descriptionText">
-          <p className="promoText">{promoBook}</p>
+          <p className="promoText">
+            Explanation: "The most enjoyable novel of the year for sure. - New
+            York Times"
+          </p>
           <Button onClick={() => console.log("")}>Add To Wishlist</Button>
         </div>
       </div>
-      <div>
+      <div className="categoryRow">
+        <button className="categoryButton">Fantasy</button>
+        <button className="categoryButton">Romance</button>
+        <button className="categoryButton">Non-Fiction</button>
+        <button className="categoryButton">Mystery</button>
+        <button className="categoryButton">Mystery</button>
+      </div>
+      {/* <div>
         <ListGroup
           items={books}
           heading="Books"
           onSelectItem={handleSelectedItem}
         />
-      </div>
+      </div> */}
     </>
   );
 }
