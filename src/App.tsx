@@ -1,10 +1,12 @@
-import ListGroup from "./components/ListGroup";
-import Alert from "./components/Alert";
-import Button from "./components/Button";
 import { useState } from "react";
 import "./App.css";
-import myImage from "./resources/bookcover.jpeg";
-import * as MaterialDesign from "react-icons/md";
+
+import Alert from "./components/Alert";
+import ListGroup from "./components/ListGroup";
+import PromoArea from "./components/PromoArea";
+import CategoryArea from "./components/CategoryArea";
+import ProductsArea from "./components/ProductsArea";
+import Menu from "./components/Menu";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -16,6 +18,8 @@ function App() {
     "Normal People",
     "Pride and Prejudice",
   ];
+
+  let categories = ["Fantasy", "Romance", "Non-Fiction", "Mystery"];
 
   //The promotion book is selected randomly from all the books
   //to be displayed on the Promotion Area of the page.
@@ -32,17 +36,8 @@ function App() {
 
   return (
     <>
-      <div className="menuDiv">
-        <button className="icon">
-          <MaterialDesign.MdMenu size={40} />
-        </button>
-        <span className="searchBar">
-          <input type="text" className="text" placeholder="Search..."></input>
-          <button className="icon" onClick={handleSearchClick}>
-            <MaterialDesign.MdSearch size={30} />
-          </button>
-        </span>
-      </div>
+      <Menu handleSearchClick={handleSearchClick} />
+
       <div>
         {alertVisible && (
           <Alert onClose={() => setAlertVisibility(false)}>
@@ -50,32 +45,18 @@ function App() {
           </Alert>
         )}
       </div>
-      <div className={"promoRow"}>
-        <div>
-          <img className="promoImg" src={myImage}></img>
-        </div>
-        <div className="descriptionText">
-          <p className="promoText">
-            Explanation: "The most enjoyable novel of the year for sure. - New
-            York Times"
-          </p>
-          <Button onClick={() => console.log("")}>Add To Wishlist</Button>
-        </div>
-      </div>
-      <div className="categoryRow">
-        <button className="categoryButton">Fantasy</button>
-        <button className="categoryButton">Romance</button>
-        <button className="categoryButton">Non-Fiction</button>
-        <button className="categoryButton">Mystery</button>
-        <button className="categoryButton">Mystery</button>
-      </div>
-      {/* <div>
+
+      <PromoArea book={promoBook} />
+      <CategoryArea categories={categories} />
+      <ProductsArea products={books} />
+
+      <div>
         <ListGroup
           items={books}
           heading="Books"
           onSelectItem={handleSelectedItem}
         />
-      </div> */}
+      </div>
     </>
   );
 }

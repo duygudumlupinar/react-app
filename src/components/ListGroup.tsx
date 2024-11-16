@@ -15,27 +15,19 @@ function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
     <>
       <h1>{heading}</h1>
       {items.length === 0 && <p>No item found</p>}
-      <ul className="list-group">
+      <ul className="categoryRow">
         {items.map((item, index) => (
           <li
-            className={
-              selectedIndex === index
-                ? "list-group-item active"
-                : "list-group-item"
-            }
             key={item}
             onClick={() => {
               setSelectedIndex(index);
               onSelectItem(item);
             }}
           >
-            {item}
+            <button className="categoryButton">{item}</button>
           </li>
         ))}
       </ul>
-      <button type="button" className="btn btn-primary">
-        Search {heading}
-      </button>
     </>
   );
 }
