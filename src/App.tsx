@@ -5,7 +5,6 @@ import Alert from "./components/Alert";
 import ListGroup from "./components/ListGroup";
 import PromoArea from "./components/PromoArea";
 import CategoryArea from "./components/CategoryArea";
-import ProductsArea from "./components/ProductsArea";
 import Menu from "./components/Menu";
 
 function App() {
@@ -48,13 +47,22 @@ function App() {
 
       <PromoArea book={promoBook} />
       <CategoryArea categories={categories} />
-      <ProductsArea products={books} />
 
       <div>
         <ListGroup
           items={books}
-          heading="Books"
+          heading="What We Recommend"
           onSelectItem={handleSelectedItem}
+          style="categoryRow"
+        />
+      </div>
+
+      <div>
+        <ListGroup
+          items={books}
+          heading="Top Sellers"
+          onSelectItem={handleSelectedItem}
+          style="categoryRowAlt"
         />
       </div>
     </>

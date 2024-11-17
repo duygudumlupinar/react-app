@@ -6,7 +6,7 @@ interface props {
 
 const CategoryArea = ({ categories }: props) => {
   return (
-    <ul className="categoryRow">
+    <ul className="categoryRowAlt">
       {categories.map((category, index) => (
         <li key={index}>
           <button className="categoryButton">{category}</button>
