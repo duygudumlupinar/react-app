@@ -6,6 +6,7 @@ import ListGroup from "./components/ListGroup";
 import PromoArea from "./components/PromoArea";
 import CategoryArea from "./components/CategoryArea";
 import Menu from "./components/Menu";
+import Footer from "./components/Footer";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -65,6 +66,8 @@ function App() {
           style="categoryRowAlt"
         />
       </div>
+
+      <Footer />
     </>
   );
 }

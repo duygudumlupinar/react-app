@@ -1,5 +1,6 @@
 import React from "react";
 import * as MaterialDesign from "react-icons/md";
+import logo from "../resources/Logo.png";
 
 interface props {
   handleSearchClick: () => void;
@@ -8,9 +9,12 @@ interface props {
 const Menu = ({ handleSearchClick }: props) => {
   return (
     <div className="menuDiv">
-      <button className="icon">
-        <MaterialDesign.MdMenu size={40} />
-      </button>
+      <span>
+        <button className="icon">
+          <MaterialDesign.MdMenu size={40} />
+        </button>
+        <img className="logoImg" src={logo}></img>
+      </span>
       <span className="searchBar">
         <input type="text" className="text" placeholder="Search..."></input>
         <button className="icon" onClick={handleSearchClick}>

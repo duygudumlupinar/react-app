@@ -1,4 +1,5 @@
 import { MouseEvent, useState } from "react";
+import bookCover from "../resources/bookcover.jpeg";
 
 interface ListGroupProps {
   items: string[];
@@ -30,7 +31,10 @@ function ListGroup({
               onSelectItem(item);
             }}
           >
-            <button className="categoryButton">{item}</button>
+            <button className="bookButton">
+              {<img className="promoImg" src={bookCover}></img>}
+              {item}
+            </button>
           </li>
         ))}
       </ul>
