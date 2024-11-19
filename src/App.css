@@ -42,7 +42,8 @@
 }
 
 .promoRow{
-  background-color: #CF966F;
+  background-image: url("./resources/PromotionBackground.png");
+  background-color: #ffffff;
   margin-top: 10px;
   /* position: relative;
   left: 50%;
@@ -53,15 +54,27 @@
   padding:40px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  align-items: center;
 }
 
 .promoText{
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  margin-left: 0;
   text-align: left;
-  color:#ffffff;
+  color: #A5631C;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 100px rgb(255, 255, 255);
 }
 
 .promoImg{
+  max-height: 350px;
+}
+
+.bookImg{
   max-height: 250px;
 }
 
@@ -75,10 +88,13 @@
   padding : 8px;
 }
 
+.myButton:hover{
+  transform: scale(1.1);
+  background-color: #a5631cd3;
+}
+
 .descriptionText{
-  padding-top: 50px;
-  align-items: center;
-  text-align: center;
+  text-align: left;
 }
 
 .searchBar{
@@ -158,6 +174,13 @@
 
 .categoryButton:hover{
   transform: scale(1.1);
+  background-color: #a5631cd3;
+}
+
+.categoryButtonText{
+  color:#ffffffba;
+  position: relative;
+  bottom: -50px;
 }
 
 .bookButton{
@@ -204,5 +227,8 @@ h1{
 }
 
 .footerText{
+  display: block;
+  border:none;
+  background-color: transparent;
   color:#ffffff50;
 }

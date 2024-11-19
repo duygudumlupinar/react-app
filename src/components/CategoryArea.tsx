@@ -12,7 +12,7 @@ const CategoryArea = ({ categories }: props) => {
         <li key={index}>
           <button className="categoryButton">
             {category}
-            <p>
+            <p className="categoryButtonText">
               Shop Now <MaterialDesign.MdArrowForward />
             </p>
           </button>

@@ -7,19 +7,19 @@ const Footer = () => {
       <div className="footer">
         <span>
           <h3>My Account</h3>
-          <p className="footerText">Sign In</p>
-          <p className="footerText">Order Status</p>
+          <button className="footerText">Sign In</button>
+          <button className="footerText">Order Status</button>
         </span>
         <span>
           <h3>About Us</h3>
-          <p className="footerText">Our Story</p>
-          <p className="footerText">Careers</p>
-          <p className="footerText">Terms & Policy</p>
+          <button className="footerText">Our Story</button>
+          <button className="footerText">Careers</button>
+          <button className="footerText">Terms & Policy</button>
         </span>
         <span>
           <h3>Help</h3>
-          <p className="footerText">Help Center</p>
-          <p className="footerText">Shipping & Returns</p>
+          <button className="footerText">Help Center</button>
+          <button className="footerText">Shipping & Returns</button>
         </span>
         <div>
           <h3>Follow us on Social Media</h3>
@@ -35,7 +35,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="footerText">
-        <h6>c Pages&Pines Inc. All Rights Reserved</h6>
+        <h6>
+          <MaterialDesign.MdCopyright /> Pages&Pines Inc. All Rights Reserved
+        </h6>
       </div>
     </>
   );

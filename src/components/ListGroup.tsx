@@ -32,7 +32,7 @@ function ListGroup({
             }}
           >
             <button className="bookButton">
-              {<img className="promoImg" src={bookCover}></img>}
+              {<img className="bookImg" src={bookCover}></img>}
               {item}
             </button>
           </li>
