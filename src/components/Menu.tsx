@@ -15,6 +15,18 @@ const Menu = ({ handleSearchClick }: props) => {
         </button>
         <img className="logoImg" src={logo}></img>
       </span>
+      <span>
+        <button className="menuItems">Categories</button>
+      </span>
+      <span>
+        <button className="menuItems">About Us</button>
+      </span>
+      <span>
+        <button className="menuItems">Help</button>
+      </span>
+      <span>
+        <button className="menuItems">My Account</button>
+      </span>
       <span className="searchBar">
         <input type="text" className="text" placeholder="Search..."></input>
         <button className="icon" onClick={handleSearchClick}>

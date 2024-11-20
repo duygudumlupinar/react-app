@@ -1,5 +1,6 @@
 import { MouseEvent, useState } from "react";
 import bookCover from "../resources/bookcover.jpeg";
+import * as MaterialDesign from "react-icons/md";
 
 interface ListGroupProps {
   items: string[];
@@ -23,6 +24,9 @@ function ListGroup({
       {items.length === 0 && <p>No item found</p>}
       <ul className={style}>
         <h1>{heading}</h1>
+        <button className="arrowButton">
+          <MaterialDesign.MdArrowBack size={40} />
+        </button>
         {items.map((item, index) => (
           <li
             key={item}
@@ -37,6 +41,9 @@ function ListGroup({
             </button>
           </li>
         ))}
+        <button className="arrowButton">
+          <MaterialDesign.MdArrowForward size={40} />
+        </button>
       </ul>
     </>
   );
