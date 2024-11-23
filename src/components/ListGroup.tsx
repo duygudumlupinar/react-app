@@ -23,7 +23,7 @@ function ListGroup({
     <>
       {items.length === 0 && <p>No item found</p>}
       <ul className={style}>
-        <h1>{heading}</h1>
+        <h2>{heading}</h2>
         <button className="arrowButton">
           <MaterialDesign.MdArrowBack size={40} />
         </button>
