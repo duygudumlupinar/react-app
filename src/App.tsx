@@ -7,24 +7,21 @@ import PromoArea from "./components/PromoArea";
 import CategoryArea from "./components/CategoryArea";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
+import Books from "./data/db.json";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
 
-  let books = [
-    "Harry Potter",
-    "Shadow and Bone",
-    "Crime and Punishment",
-    "Normal People",
-    "Pride and Prejudice",
-  ];
+  Books.map((book) => {
+    return <div>{book.title}</div>;
+  });
 
   let categories = ["Fantasy", "Romance", "Non-Fiction", "Mystery"];
 
   //The promotion book is selected randomly from all the books
   //to be displayed on the Promotion Area of the page.
-  let i = Math.floor(Math.random() * books.length);
-  let promoBook = books[i];
+  let i = Math.floor(Math.random() * Books.length);
+  let promoBook = Books[i];
 
   const handleSelectedItem = (item: string) => {
     console.log(item);
@@ -46,12 +43,16 @@ function App() {
         )}
       </div>
 
-      <PromoArea book={promoBook} />
+      <PromoArea
+        title={promoBook.title}
+        author={promoBook.author}
+        description={promoBook.description}
+      />
       <CategoryArea categories={categories} />
 
       <div>
         <ListGroup
-          items={books}
+          items={Books}
           heading="What We Recommend"
           onSelectItem={handleSelectedItem}
           style="categoryRow"
@@ -60,7 +61,7 @@ function App() {
 
       <div>
         <ListGroup
-          items={books}
+          items={Books}
           heading="Top Sellers"
           onSelectItem={handleSelectedItem}
           style="categoryRowAlt"

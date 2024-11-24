@@ -1,9 +1,10 @@
 import { MouseEvent, useState } from "react";
 import bookCover from "../resources/bookcover.jpeg";
 import * as MaterialDesign from "react-icons/md";
+import Books from "../data/db.json";
 
 interface ListGroupProps {
-  items: string[];
+  items: typeof Books;
   heading: string;
   style: string;
   onSelectItem: (item: string) => void;
@@ -15,8 +16,6 @@ function ListGroup({
   style = "categoryRow",
   onSelectItem,
 }: ListGroupProps) {
-  const [selectedIndex, setSelectedIndex] = useState(-1);
-
   const handleClick = (event: MouseEvent) => console.log(event);
 
   return (
@@ -27,17 +26,18 @@ function ListGroup({
         <button className="arrowButton">
           <MaterialDesign.MdArrowBack size={40} />
         </button>
-        {items.map((item, index) => (
+        {items.map((book, index) => (
           <li
-            key={item}
+            key={book.id}
             onClick={() => {
-              setSelectedIndex(index);
-              onSelectItem(item);
+              onSelectItem(book.id);
             }}
           >
             <button className="bookButton">
               {<img className="bookImg" src={bookCover}></img>}
-              {item}
+              {book.title}
+              <br></br>
+              {book.author}
             </button>
           </li>
         ))}

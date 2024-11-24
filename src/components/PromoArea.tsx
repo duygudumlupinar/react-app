@@ -3,17 +3,19 @@ import Button from "./Button";
 import myImage from "../resources/bookcover.jpeg";
 
 interface props {
-  book: string;
+  title: string;
+  author: string;
+  description: string;
 }
 
-const PromoArea = ({ book }: props) => {
+const PromoArea = ({ title, author, description }: props) => {
   return (
     <div className={"promoRow"}>
       <div>
         <img className="promoImg" src={myImage}></img>
       </div>
       <div className="descriptionText">
-        <p className="promoText">{book}</p>
+        <p className="promoText">{description}</p>
         <Button onClick={() => console.log("")}>Add To Wishlist</Button>
       </div>
     </div>
