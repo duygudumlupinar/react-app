@@ -270,8 +270,6 @@ h2{
   display: block;
 }
 
-.dropdownContent button:hover {text-decoration: underline;}
-
 .dropdown:hover .dropdownContent {display: block;}
 
 .dropdown:hover .menuItems {text-decoration: underline;}
@@ -282,4 +280,17 @@ h2{
   background-color: transparent;
   color:#ffffff50;
   text-align: left;
+}
+
+.dropdownText:hover{
+  text-decoration: underline;
+}
+
+.dropdownMenu
+{
+  position:absolute;
+  display: block;
+  background-color: #A5631C;
+  width: 200px;
+  border-radius: 10px;
 }

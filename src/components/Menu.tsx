@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment, useState } from "react";
 import * as MaterialDesign from "react-icons/md";
 import logo from "../resources/Logo.png";
 
@@ -6,18 +6,27 @@ interface props {
   handleSearchClick: () => void;
 }
 
-const ShowDropDownMenu = () => {
-  document.getElementById("dropDownMenu")!.classList.toggle("show");
-};
-
 const Menu = ({ handleSearchClick }: props) => {
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const ShowDropDownMenu = () => {
+    setOpenMenu((prev) => !prev);
+  };
+
   return (
     <div className="menuDiv">
-      <span className="dropdown">
-        <button className="icon">
+      <span>
+        <button className="menuItems" onClick={ShowDropDownMenu}>
           <MaterialDesign.MdMenu size={40} />
         </button>
-        <div id="dropDownMenu">a</div>
+        {openMenu && (
+          <div className="dropdownMenu">
+            <button className="dropdownText">Categories</button>
+            <button className="dropdownText">About Us</button>
+            <button className="dropdownText">Help</button>
+            <button className="dropdownText">My Account</button>
+          </div>
+        )}
       </span>
       <span>
         <img className="logoImg" src={logo}></img>
