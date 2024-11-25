@@ -1,8 +1,6 @@
-<h1>React Online Bookstore Project</h1>
-This React project is a webpage of a bookstore that is developed following the design document below which is designed in Figma.
-<br><br>
-
-![image alt](https://github.com/duygudumlupinar/react-app/blob/1b649a407453263a2dbd2a89397c5bbd177809e7/Pages%26Pines.png)
+<h1>ReactJS Online Bookstore Project</h1>
+This ReactJS project is a website of a bookstore and was bootstrapped with Create React App.
+<br>
 
 <h2>Usage</h2>
 <h3>Install Dependencies</h3>
@@ -17,3 +15,7 @@ npm install
 ```shell
 npm run dev
 ```
+
+<h2>Snapshot Of The Page</h2>
+
+![image alt](https://github.com/duygudumlupinar/react-app/blob/a47f325c84f95e55657c3ef2b1f8401a3cc0950b/Pages%26Pines.png)
