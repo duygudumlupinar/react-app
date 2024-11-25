@@ -3,6 +3,9 @@ import bookCover from "../resources/bookcover.jpeg";
 import * as MaterialDesign from "react-icons/md";
 import Books from "../data/db.json";
 
+// Takes all information about products as an array
+// the heading of the division and style of the division
+// and the method to call as properties.
 interface ListGroupProps {
   items: typeof Books;
   heading: string;
@@ -10,6 +13,7 @@ interface ListGroupProps {
   onSelectItem: (item: string) => void;
 }
 
+// Displays products as a list.
 function ListGroup({
   items,
   heading,

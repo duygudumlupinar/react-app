@@ -11,11 +11,6 @@ import Books from "./data/db.json";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
-
-  Books.map((book) => {
-    return <div>{book.title}</div>;
-  });
-
   let categories = ["Fantasy", "Romance", "Non-Fiction", "Mystery"];
 
   //The promotion book is selected randomly from all the books

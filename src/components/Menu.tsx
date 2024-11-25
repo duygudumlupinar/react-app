@@ -2,6 +2,7 @@ import React, { Fragment, useState } from "react";
 import * as MaterialDesign from "react-icons/md";
 import logo from "../resources/Logo.png";
 
+// Takes the method to be called as property.
 interface props {
   handleSearchClick: () => void;
 }
@@ -9,6 +10,7 @@ interface props {
 const Menu = ({ handleSearchClick }: props) => {
   const [openMenu, setOpenMenu] = useState(false);
 
+  // Toggles the dropdown menu on each click.
   const ShowDropDownMenu = () => {
     setOpenMenu((prev) => !prev);
   };
