@@ -1,7 +1,7 @@
 import { MouseEvent, useState } from "react";
-import bookCover from "../resources/bookcover.jpeg";
+import bookCover from "@/resources/bookcover.jpeg";
 import * as MaterialDesign from "react-icons/md";
-import Books from "../data/db.json";
+import Books from "@/data/db.json";
 
 // Takes all information about products as an array
 // the heading of the division and style of the division

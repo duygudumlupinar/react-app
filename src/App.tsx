@@ -1,13 +1,13 @@
 import { useState } from "react";
-import "./App.css";
-
-import Alert from "./components/Alert";
-import ListGroup from "./components/ListGroup";
-import PromoArea from "./components/PromoArea";
-import CategoryArea from "./components/CategoryArea";
-import Menu from "./components/Menu";
-import Footer from "./components/Footer";
-import Books from "./data/db.json";
+import Books from "@/data/db.json";
+import {
+  Alert,
+  ListGroup,
+  PromoArea,
+  CategoryArea,
+  Menu,
+  Footer,
+} from "@/components";
 
 function App() {
   const [alertVisible, setAlertVisibility] = useState(false);
@@ -30,38 +30,33 @@ function App() {
     <>
       <Menu handleSearchClick={handleSearchClick} />
 
-      <div>
-        {alertVisible && (
-          <Alert onClose={() => setAlertVisibility(false)}>
-            No matching items.
-          </Alert>
-        )}
-      </div>
+      {alertVisible && (
+        <Alert onClose={() => setAlertVisibility(false)}>
+          No matching items.
+        </Alert>
+      )}
 
       <PromoArea
         title={promoBook.title}
         author={promoBook.author}
         description={promoBook.description}
       />
+
       <CategoryArea categories={categories} />
 
-      <div>
-        <ListGroup
-          items={Books}
-          heading="What We Recommend"
-          onSelectItem={handleSelectedItem}
-          style="categoryRow"
-        />
-      </div>
+      <ListGroup
+        items={Books}
+        heading="What We Recommend"
+        onSelectItem={handleSelectedItem}
+        style="categoryRow"
+      />
 
-      <div>
-        <ListGroup
-          items={Books}
-          heading="Top Sellers"
-          onSelectItem={handleSelectedItem}
-          style="categoryRowAlt"
-        />
-      </div>
+      <ListGroup
+        items={Books}
+        heading="Top Sellers"
+        onSelectItem={handleSelectedItem}
+        style="categoryRowAlt"
+      />
 
       <Footer />
     </>

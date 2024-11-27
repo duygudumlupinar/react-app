@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "./Button";
-import myImage from "../resources/bookcover.jpeg";
+import Button from "@/components/Button";
+import myImage from "@/resources/bookcover.jpeg";
 
 // Takes all the information about the book to be promoted
 // as properties.

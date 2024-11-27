@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import * as MaterialDesign from "react-icons/md";
-import logo from "../resources/Logo.png";
+import logo from "@/resources/Logo.png";
 
 // Takes the method to be called as property.
 interface props {
