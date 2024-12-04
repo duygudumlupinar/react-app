@@ -9,12 +9,6 @@
   background-image: url("./resources/PromotionBackground.png");
   background-color: #ffffff;
   margin-top: 10px;
-  /* position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw; 
-  width: 100vw;*/
   padding:40px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
