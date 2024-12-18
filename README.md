@@ -1,5 +1,5 @@
-<h1>ReactJS Online Bookstore Project</h1>
-This ReactJS project is a website of a bookstore and was bootstrapped with Create React App.
+<h1>React.JS Online Bookstore Project</h1>
+This React.JS project is a website of a bookstore.
 <br>
 This project is designed by me in Figma. You can see the design document <a href="https://www.figma.com/design/8QRQV4w2YYeooTieoBOKAu/Pages%26Pines?node-id=0-1&t=BmrmphTzrq7CKN4O-1">here</a>.
 <br>
